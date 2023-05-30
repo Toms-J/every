@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import ButtonAppBar from './components/navbar/Navbar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='hero'>
+      <ButtonAppBar></ButtonAppBar>
+      {/* <img className="hero-logo" src="https://export-download.canva.com/2wpww/DAFduK2wpww/4/0/0001-48207680946.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJHKNGJLC2J7OGJ6Q%2F20230529%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230529T221217Z&X-Amz-Expires=48220&X-Amz-Signature=1850a2ed29bafde8c238189c1d2d08d6e0fb926f0784f664db45ec0f3624a9d8&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3DUTF-8%27%27Favicon%2520EVERY.svg&response-expires=Tue%2C%2030%20May%202023%2011%3A35%3A57%20GMT" alt="logo every"></img> */}
+        <h1 className="hero-title">
+          EVERY
+        </h1>
+        <h2 className='hero-subtitle game'>
+          GAME
+        </h2>
+        <h2 className='hero-subtitle device'>
+          DEVICE
+        </h2>
+        <h2 className='hero-subtitle free'>
+          FREE
+        </h2>
     </div>
   );
 }
