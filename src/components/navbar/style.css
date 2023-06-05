@@ -1,0 +1,20 @@
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+.main-link:hover {
+    transition: color .2s;
+    color: #835fb2;
+}
+
+.css-1q96qmb-MuiPaper-root-MuiAppBar-root {
+    background-color: transparent !important;
+    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms !important;
+}
+
+.css-1v3sqn7-MuiPaper-root-MuiAppBar-root {
+    box-shadow: none !important;
+    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms !important;
+}
