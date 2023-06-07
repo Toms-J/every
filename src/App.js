@@ -1,11 +1,12 @@
 import './App.css';
 import * as React from 'react'
-import ElevateAppBar from './components/navbar/index';
 import { createTheme, ThemeProvider } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { CssBaseline } from '@mui/material';
 import { lightThemeOptions, darkThemeOptions } from './theme';
 import PrimarySearchAppBar from './components/navbar/index';
+import Carousel from './components/main-carousel';
+import TopCarousel from './components/top-carousel';
 
 function App() {
 
@@ -17,26 +18,28 @@ function App() {
       [prefersDarkMode],
     );
 
+
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <PrimarySearchAppBar></PrimarySearchAppBar>
-        <div className='hero'>
-         
-            {/* <h1 className="hero-title">
-              every
-            </h1>
-            <h2 className='hero-subtitle game'>
-              game
-            </h2>
-            <h2 className='hero-subtitle device'>
-              device
-            </h2>
-            <h2 className='hero-subtitle free'>
-              free
-            </h2> */}
-        </div>
-    </ThemeProvider>
+    <>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <PrimarySearchAppBar></PrimarySearchAppBar>
+          <TopCarousel />
+          <Carousel />
+              {/* <h1 className="hero-title">
+                every
+              </h1>
+              <h2 className='hero-subtitle game'>
+                game
+              </h2>
+              <h2 className='hero-subtitle device'>
+                device
+              </h2>
+              <h2 className='hero-subtitle free'>
+                free
+              </h2> */}
+      </ThemeProvider>
+    </>
   );
 }
 

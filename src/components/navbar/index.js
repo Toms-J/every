@@ -12,11 +12,13 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import NotificationsNoneIcon from '@mui/icons-material/Notifications';
+import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import Link from '@mui/material/Link';
+import Button from '@mui/material/Button';
 import MessageOutlinedIcon from '@mui/icons-material/MessageOutlined';
 import SportsEsportsRoundedIcon from '@mui/icons-material/SportsEsportsRounded';
+import './style.css'
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -136,7 +138,7 @@ export default function PrimarySearchAppBar() {
           color="inherit"
         >
           <Badge badgeContent={9} color="error">
-            <NotificationsNoneIcon />
+            <NotificationsNoneOutlinedIcon />
           </Badge>
         </IconButton>
         <p>Notifications</p>
@@ -158,38 +160,42 @@ export default function PrimarySearchAppBar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-          >
-            <Link href='/'><SportsEsportsRoundedIcon /></Link>
-          </IconButton>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ display: { xs: 'none', sm: 'block' } }}
-          >
-            <Link color='inherit' underline='none'>Browse</Link>
-          </Typography>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search>
+          <div className='side-column'>
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="open drawer"
+              sx={{ mr: 2 }}
+            >
+              <SportsEsportsRoundedIcon color='primary'/>
+            </IconButton>
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{ display: { xs: 'none', sm: 'block' } }}
+            >
+              <Link color='inherit' underline='none'>Browse</Link>
+            </Typography>
+          </div>
+          <div className='central-column'>
+            <Search>
+              <SearchIconWrapper>
+                <SearchIcon />
+              </SearchIconWrapper>
+              <StyledInputBase
+                placeholder="Search…"
+                inputProps={{ 'aria-label': 'search' }}
+              />
+            </Search>
+          </div>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="error">
+              <Badge badgeContent={4} color="secondary">
                 <MessageOutlinedIcon />
               </Badge>
             </IconButton>
@@ -198,8 +204,8 @@ export default function PrimarySearchAppBar() {
               aria-label="show new notifications"
               color="inherit"
             >
-              <Badge badgeContent={9} color="error">
-                <NotificationsNoneIcon />
+              <Badge badgeContent={9} color="secondary">
+                <NotificationsNoneOutlinedIcon />
               </Badge>
             </IconButton>
             <IconButton
