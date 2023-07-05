@@ -20,7 +20,7 @@ export const lightThemeOptions = {
         main: '#C467E9',
       },
       background: {
-        default: 'rgba(18,18,18,0.8)',
+        default: 'rgba(18,18,18,0.85)',
       },
     },
   };

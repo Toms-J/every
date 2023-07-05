@@ -30,22 +30,22 @@ function Carousel() {
     fetchLatestGames();
   }, []);
 
-  const handleClick = (e) => {
-    if (e.target.className == 'item active') {
-      e.target.classList.remove('active');
-    } else {
-      e.target.classList.add('active');
-    }
-  }
+  const handleMouseEnter = (e) => {
+    e.target.classList.add('active');
+}
+
+const handleMouseLeave = (e) => {
+  e.target.classList.remove('active');
+}
 
   return (
     <>
       <section className="game-section">
-        <h2 className="line-title">Popular games</h2>
-        <OwlCarousel autoWidth='true' dots='false' lazyload='true' className="owl-carousel custom-carousel owl-theme">
+        <h2 className="line-title">Popular</h2>
+        <OwlCarousel autoWidth='true' dots='false' lazyload='true' style={{maxHeight: 350}} className="owl-carousel custom-carousel owl-theme">
           {
             latestGames.map((game, i) => { return (
-              <div className="item" onClick={handleClick} key={i} style={{backgroundImage: `url(${game.background_image})`}}>
+              <div className="item" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} key={i} style={{backgroundImage: `url(${game.background_image})`}}>
                 <div className="item-desc">
                   <h3>{game.name}</h3>
                   <p>{game.genres.map((genre) => genre.name + ' ')}</p>

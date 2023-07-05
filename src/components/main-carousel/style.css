@@ -38,8 +38,8 @@ a:hover {
   text-decoration: none;
   outline: none;
 }
-a:hover {
-  color: #e73700;
+.game-section a:hover {
+  color: #835fb2;
 }
 h2 {
   margin-bottom: 18px;
@@ -53,7 +53,7 @@ h2 {
 h3 {
   margin: 0 0 10px;
   font-size: 28px;
-  line-height: 36px;
+  line-height: 44px;
 }
 button {
   outline: none !important;
@@ -101,9 +101,9 @@ button {
   display: -webkit-flex;
 }
 .game-section .item {
-  margin: 0 15px 60px;
-  width: 320px;
-  height: 400px;
+  margin: 0 6px 60px;
+  width: 256px;
+  height: 320px;
   display: flex;
   display: -webkit-flex;
   align-items: flex-end;
@@ -117,7 +117,7 @@ button {
   cursor: pointer;
 }
 .game-section .item.active {
-  width: 500px;
+  width: 400px;
   box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
 }
@@ -174,7 +174,7 @@ button {
   h3 {
     margin: 0 0 8px;
     font-size: 24px;
-    line-height: 32px;
+    line-height: 35px;
   }
 
   /* -------- Landing page ------- */
@@ -213,7 +213,7 @@ button {
     padding: 50px 30px 40px;
   }
   .game-section .item {
-    margin: 0 12px 60px;
+    margin: 0 5px 60px;
     width: 240px;
     height: 330px;
   }
@@ -247,7 +247,7 @@ button {
     padding: 30px 15px 20px;
   }
   .game-section .item {
-    margin: 0 10px 40px;
+    margin: 0 4px 40px;
     width: 200px;
     height: 280px;
   }
@@ -260,5 +260,6 @@ button {
     padding: 0 14px 5px;
     transform: translateY(calc(100% - 42px));
     -webkit-transform: translateY(calc(100% - 42px));
+    margin-bottom: -15px;
   }
 }

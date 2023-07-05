@@ -8,7 +8,7 @@ const TopCarousel = () => {
 
   const [latestGames, setLatestGames] = useState([]);
   const carouselOptions = {
-    items: 5,
+    items: 3,
     loop: true,
     dots: true,
     autoplay: true,
@@ -36,13 +36,22 @@ const TopCarousel = () => {
     fetchLatestGames();
   }, []);
 
+  const handleMouseEnter = (e) => {
+      e.target.classList.add('active');
+  }
+
+  const handleMouseLeave = (e) => {
+    e.target.classList.remove('active');
+  }
+
+
   return (
-    <section className="game-section" style={{marginTop: 64}}>
-    <h2 className="line-title">Latest releases</h2>
-    <OwlCarousel {...carouselOptions} autoWidth='true' className="owl-carousel custom-carousel owl-theme">
+    <section className="game-section" style={{marginTop: 64, marginBottom: -60}}>
+    <h2 className="line-title">Recently added</h2>
+    <OwlCarousel {...carouselOptions} autoWidth='true' style={{height: 'auto'}} className="owl-carousel custom-carousel owl-theme">
       {
         latestGames.map((game, i) => { return (
-          <div className="item" key={i} style={{backgroundImage: `url(${game.background_image})`}}>
+          <div className="item" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} key={i} style={{backgroundImage: `url(${game.background_image})`}}>
             <div className="item-desc">
               <h3>{game.name}</h3>
               <p>{game.genres.map((genre) => genre.name + ' ')}</p>

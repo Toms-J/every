@@ -178,16 +178,16 @@ export default function PrimarySearchAppBar() {
               component="div"
               sx={{ display: { xs: 'none', sm: 'block' } }}
             >
-              <Link color='inherit' underline='none'>Browse</Link>
+              <Link color='inherit' underline='none' href='/' style={{fontFamily: 'Baron'}}>every</Link>
             </Typography>
           </div>
           <div className='central-column'>
-            <Search>
+            <Search width={1000}>
               <SearchIconWrapper>
                 <SearchIcon />
               </SearchIconWrapper>
               <StyledInputBase
-                placeholder="Search…"
+                placeholder="Search games"
                 inputProps={{ 'aria-label': 'search' }}
               />
             </Search>
